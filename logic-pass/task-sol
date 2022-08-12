@@ -1,1 +1,24 @@
+err_str="Hello, please fremove the error"
+err_char=input("please type the character to remove")
+corr_str=[]
 
+for test_char in err_str:
+    if  test_char!=err_char:
+        corr_str.append(test_char)
+
+print(''.join(corr_str))
+
+
+################
+print("please enter the range to find the prime numbers within:")
+first_value = int(input("first Value: "))
+last_value = int(input("last Value: "))
+
+print("The prime numbers in this range: ")
+for number in range(first_value, last_value + 1):
+    if number > 1:
+        for i in range(2, number):
+            if (number % i) == 0:
+                break
+        else:
+            print(number)
